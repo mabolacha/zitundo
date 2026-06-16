@@ -1,11 +1,13 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
+import CookieConsent from './components/CookieConsent';
 import HomePage from './pages/HomePage';
 import ComparateurPage from './pages/ComparateurPage';
 import SimulateurPage from './pages/SimulateurPage';
 import MigrationPage from './pages/MigrationPage';
 import EligibilitePage from './pages/EligibilitePage';
+import MentionsLegalesPage from './pages/MentionsLegalesPage';
 
 const pageVariants = {
   initial: { opacity: 0, y: 12 },
@@ -30,6 +32,7 @@ function AnimatedRoutes() {
           <Route path="/simulateur" element={<SimulateurPage />} />
           <Route path="/migration" element={<MigrationPage />} />
           <Route path="/eligibilite" element={<EligibilitePage />} />
+          <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
         </Routes>
       </motion.div>
     </AnimatePresence>
@@ -62,12 +65,25 @@ export default function App() {
               <p className="text-muted text-sm">
                 © 2026 Zitundo — Comparateur indépendant, 100% gratuit.
               </p>
-              <p className="text-muted/50 text-xs">
-                Les prix affichés sont indicatifs et peuvent varier.
-              </p>
+              <div className="flex items-center gap-4">
+                <p className="text-muted/50 text-xs">
+                  Les prix affichés sont indicatifs et peuvent varier.
+                </p>
+                <Link to="/mentions-legales" className="text-xs text-muted/70 hover:text-primary transition-colors whitespace-nowrap">
+                  Mentions légales
+                </Link>
+                <button
+                  onClick={() => window.dispatchEvent(new Event('zitundo:open-cookie-manager'))}
+                  className="text-xs text-muted/70 hover:text-primary transition-colors whitespace-nowrap"
+                >
+                  Gérer mes cookies
+                </button>
+              </div>
             </div>
           </div>
         </footer>
+
+        <CookieConsent />
       </div>
     </BrowserRouter>
   );

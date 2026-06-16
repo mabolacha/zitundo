@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-do
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import CookieConsent from './components/CookieConsent';
+import ConsentScripts from './components/ConsentScripts';
 import HomePage from './pages/HomePage';
 import ComparateurPage from './pages/ComparateurPage';
 import SimulateurPage from './pages/SimulateurPage';
@@ -84,6 +85,7 @@ export default function App() {
         </footer>
 
         <CookieConsent />
+        <ConsentScripts />
       </div>
     </BrowserRouter>
   );

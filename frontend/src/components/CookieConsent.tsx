@@ -35,6 +35,10 @@ function saveConsent(affiliation: boolean, analytics: boolean) {
     timestamp: Date.now(),
   };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  // Notifie useConsent() dans le même onglet
+  window.dispatchEvent(
+    new CustomEvent('zitundo:consent-updated', { detail: { affiliation, analytics } })
+  );
 }
 
 interface ToggleProps {

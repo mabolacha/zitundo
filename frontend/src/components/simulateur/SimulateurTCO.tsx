@@ -1,7 +1,7 @@
-import { useState, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calculator, ChevronDown, Info, TrendingDown, HelpCircle, X } from 'lucide-react';
-import { OFFERS } from '../../data/offers';
+import { Calculator, ChevronDown, Info, TrendingDown, HelpCircle, X, RefreshCw } from 'lucide-react';
 import type { Offer, TCOResult } from '../../types';
 
 const DURATION = 24;
@@ -42,12 +42,57 @@ interface SimulateurTCOProps {
 }
 
 export default function SimulateurTCO({ preselectedId }: SimulateurTCOProps) {
-  const [selectedId, setSelectedId] = useState<string>(preselectedId ?? OFFERS[0].id);
+  const [offers, setOffers] = useState<Offer[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string>('');
   const [withTermination, setWithTermination] = useState(false);
   const [showWhy, setShowWhy] = useState(false);
 
-  const offer = useMemo(() => OFFERS.find((o) => o.id === selectedId)!, [selectedId]);
-  const tco = useMemo(() => computeTCO(offer, withTermination), [offer, withTermination]);
+  const fetchOffers = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const { data } = await axios.get<Offer[]>('/api/offres');
+      setOffers(data);
+      const initial = preselectedId && data.find((o) => o.id === preselectedId)
+        ? preselectedId
+        : data[0]?.id ?? '';
+      setSelectedId(initial);
+    } catch {
+      setError('Impossible de charger les offres. Vérifiez que le serveur est démarré.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => { fetchOffers(); }, []);
+
+  const offer = useMemo(() => offers.find((o) => o.id === selectedId), [offers, selectedId]);
+  const tco = useMemo(() => offer ? computeTCO(offer, withTermination) : null, [offer, withTermination]);
+
+  if (loading) {
+    return (
+      <div className="space-y-6">
+        <div className="glass-card p-6 h-52 animate-pulse bg-card-hover" />
+        <div className="glass-card p-6 h-72 animate-pulse bg-card-hover" />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="glass-card p-8 text-center space-y-4">
+        <p className="text-muted">{error}</p>
+        <button onClick={fetchOffers} className="btn-primary mx-auto">
+          <RefreshCw className="w-4 h-4" />
+          Réessayer
+        </button>
+      </div>
+    );
+  }
+
+  if (!offer || !tco) return null;
 
   const rows: { label: string; value: number; accent?: boolean }[] = [
     { label: `Mensualités promo (${Math.min(offer.promoDuration, DURATION)} mois × ${offer.promoPrice.toFixed(2)}€)`, value: tco.promoCost },
@@ -81,7 +126,7 @@ export default function SimulateurTCO({ preselectedId }: SimulateurTCOProps) {
               onChange={(e) => setSelectedId(e.target.value)}
               className="input-field pr-10 appearance-none"
             >
-              {OFFERS.map((o) => (
+              {offers.map((o) => (
                 <option key={o.id} value={o.id}>
                   {o.logo} {o.brand} – {o.name} ({o.promoPrice.toFixed(2)}€/mois)
                 </option>
@@ -104,9 +149,7 @@ export default function SimulateurTCO({ preselectedId }: SimulateurTCOProps) {
           <Info className="w-4 h-4 text-muted/50" />
         </label>
 
-        <div
-          className="rounded-xl p-3 text-xs text-muted flex items-start gap-2 bg-primary/5 border border-primary/20"
-        >
+        <div className="rounded-xl p-3 text-xs text-muted flex items-start gap-2 bg-primary/5 border border-primary/20">
           <Info className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
           <span>
             <strong className="text-primary">Formule coût réel sur 24 mois</strong> = (Prix promo × mois_promo) + (Prix régulier × mois_restants) + Frais d'installation + Frais d'activation + (Location box × 24) + Frais de résiliation
@@ -207,9 +250,7 @@ export default function SimulateurTCO({ preselectedId }: SimulateurTCOProps) {
           </div>
 
           {/* Comparison hint */}
-          <div
-            className="rounded-xl p-4 text-sm bg-card-hover border border-border"
-          >
+          <div className="rounded-xl p-4 text-sm bg-card-hover border border-border">
             <p className="text-muted">
               <span className="text-primary font-semibold">{offer.brand} – {offer.name}</span> vous coûte en moyenne{' '}
               <span className="text-foreground font-bold">{tco.monthlySmoothed.toFixed(2)}€/mois</span> sur 2 ans,

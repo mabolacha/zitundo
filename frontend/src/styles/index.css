@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-card;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(199, 89%, 48%);
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(199, 89%, 62%) 100%);
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white transition-all duration-200 overflow-hidden;
+    background: hsl(199, 89%, 48%);
+  }
+  .btn-primary:hover {
+    background: hsl(199, 89%, 40%);
+    @apply shadow-md;
+    transform: translateY(-1px);
+  }
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-foreground transition-all duration-200;
+    background: hsl(0, 0%, 100%);
+    border: 1px solid hsl(214, 32%, 91%);
+  }
+  .btn-secondary:hover {
+    border-color: hsl(199, 89%, 48%);
+    color: hsl(199, 89%, 40%);
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-foreground transition-all duration-200;
+    background: hsl(0, 0%, 100%);
+    border: 1px solid hsl(214, 32%, 91%);
+  }
+  .btn-accent:hover {
+    border-color: hsl(199, 89%, 48%);
+    color: hsl(199, 89%, 40%);
+  }
+
+  .glass-card {
+    @apply bg-card rounded-2xl border border-border shadow-sm transition-all duration-200;
+  }
+  .glass-card:hover {
+    @apply shadow-md;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+  .badge-primary {
+    background: hsla(199, 89%, 48%, 0.1);
+    color: hsl(199, 89%, 38%);
+    border: 1px solid hsla(199, 89%, 48%, 0.2);
+  }
+  .badge-accent {
+    background: hsla(43, 96%, 56%, 0.12);
+    color: hsl(43, 96%, 35%);
+    border: 1px solid hsla(43, 96%, 56%, 0.25);
+  }
+  .badge-success {
+    background: hsla(160, 84%, 39%, 0.1);
+    color: hsl(160, 84%, 32%);
+    border: 1px solid hsla(160, 84%, 39%, 0.2);
+  }
+  .badge-muted {
+    background: hsl(210, 20%, 96%);
+    color: hsl(215, 16%, 47%);
+    border: 1px solid hsl(214, 32%, 91%);
+  }
+
+  .input-field {
+    @apply w-full rounded-xl px-4 py-3 text-foreground transition-all duration-200 outline-none;
+    background: hsl(0, 0%, 100%);
+    border: 1px solid hsl(214, 32%, 91%);
+    color: hsl(222, 47%, 11%);
+  }
+  .input-field::placeholder {
+    color: hsl(215, 16%, 65%);
+  }
+  .input-field:focus {
+    border-color: hsl(199, 89%, 48%);
+    box-shadow: 0 0 0 3px hsla(199, 89%, 48%, 0.1);
+  }
+
+  .nav-link {
+    @apply relative px-3 py-2 text-sm font-medium text-muted transition-colors duration-200;
+  }
+  .nav-link:hover {
+    color: hsl(199, 89%, 40%);
+  }
+  .nav-link.active {
+    color: hsl(199, 89%, 40%);
+  }
+  .nav-link.active::after {
+    content: '';
+    @apply absolute bottom-0 left-3 right-3 h-0.5 rounded-full;
+    background: hsl(199, 89%, 48%);
+  }
+
+  .stat-card {
+    @apply glass-card p-6 text-center;
+  }
+
+  .offer-selected-ring {
+    border-color: hsl(199, 89%, 48%) !important;
+    box-shadow: 0 0 0 2px hsla(199, 89%, 48%, 0.15) !important;
+  }
+}

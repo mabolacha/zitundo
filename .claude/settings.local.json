@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(curl *)",
+      "Bash(npx playwright *)",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Bash(npm install *)",
+      "Bash(pip install *)",
+      "Bash(node *)",
+      "Bash(npx --yes playwright install chromium)",
+      "Bash(npx tsc *)",
+      "Bash(TMPDIR=/tmp grep *)",
+      "Bash(TMPDIR=/Users/anselme npm run build)",
+      "Bash(python3 *)",
+      "Bash(pkill -f \"vite\")",
+      "Bash(xargs kill -9)",
+      "Bash(TMPDIR=/Users/anselme lsof -i :5001)",
+      "Bash(TMPDIR=/Users/anselme curl -s http://localhost:5001/health)",
+      "Bash(TMPDIR=/Users/anselme curl -s http://localhost:5001/api/offres)"
+    ]
+  }
+}

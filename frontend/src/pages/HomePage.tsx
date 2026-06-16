@@ -74,8 +74,8 @@ export default function HomePage() {
   return (
     <div className="space-y-24">
       <PageSEO
-        title="Comparateur Internet France — Fibre, ADSL, 4G Box | Meilleure offre 2024"
-        description="Comparez toutes les offres internet en France : fibre optique, ADSL, 4G/5G Box. Orange, Free, SFR, Bouygues, Sosh, RED by SFR, B&You. Trouvez la meilleure offre en moins de 2 minutes."
+        title="Comparez les offres Internet en France | Zitundo"
+        description="Comparez gratuitement les offres internet fibre et ADSL d'Orange, Free, SFR, Bouygues, Sosh, RED et B&You. Simulez le coût réel sur 24 mois."
         path="/"
       />
       {/* Hero */}

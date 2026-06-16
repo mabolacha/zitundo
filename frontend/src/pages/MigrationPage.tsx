@@ -6,8 +6,8 @@ export default function MigrationPage() {
   return (
     <div className="space-y-6 max-w-2xl mx-auto">
       <PageSEO
-        title="Changer d'Opérateur Internet en France sans coupure | Zitundo"
-        description="Guide étape par étape pour changer de fournisseur internet sans interruption de service. Récupérez votre RIO, souscrivez au nouveau FAI et gérez la transition en toute sérénité."
+        title="Changer d'Opérateur Internet sans coupure | Zitundo"
+        description="Changez de fournisseur internet en 4 étapes sans coupure de service. Récupérez votre RIO, souscrivez au nouveau FAI et gérez la transition sereinement."
         path="/migration"
       />
       <div>

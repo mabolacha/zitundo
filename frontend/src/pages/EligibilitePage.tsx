@@ -6,8 +6,8 @@ export default function EligibilitePage() {
   return (
     <div className="space-y-6">
       <PageSEO
-        title="Test d'éligibilité internet — Fibre et ADSL disponibles à votre adresse"
-        description="Vérifiez quelles offres internet (Fibre FTTH, ADSL, VDSL) sont disponibles à votre adresse en France. Découvrez les opérateurs présents sur votre NRO et le débit maximum estimé."
+        title="Tester mon Éligibilité Fibre & ADSL | Zitundo"
+        description="Vérifiez si la fibre optique est disponible à votre adresse en France. Résultats basés sur les données des opérateurs."
         path="/eligibilite"
       />
       <div className="text-center">

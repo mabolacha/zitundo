@@ -10,8 +10,8 @@ export default function SimulateurPage() {
   return (
     <div className="space-y-6 max-w-2xl mx-auto">
       <PageSEO
-        title="Simulateur de coût réel Internet sur 24 mois — Comparateur Internet France"
-        description="Calculez le vrai coût de votre abonnement internet sur 24 mois : prix promo, frais d'installation, activation et location de box. Simulez n'importe quelle offre en quelques secondes."
+        title="Simulateur de Coût Réel Internet sur 24 mois | Zitundo"
+        description="Calculez le coût total réel de votre abonnement internet sur 24 mois, frais cachés inclus (installation, activation, résiliation, location box)."
         path="/simulateur"
       />
       <div>

@@ -6,8 +6,8 @@ export default function ComparateurPage() {
   return (
     <div className="space-y-6">
       <PageSEO
-        title="Comparateur d'offres Internet France — Fibre, ADSL, 4G Box"
-        description="Comparez 11 offres internet des principaux opérateurs français (Orange, Free, SFR, Bouygues, Sosh, RED, B&You). Filtrez par technologie, prix et débit. Tableau comparatif détaillé."
+        title="Comparateur Offres Internet Fibre & ADSL | Zitundo"
+        description="Filtrez et comparez 11 offres internet des principaux opérateurs français. Fibre ou ADSL, avec ou sans TV, avec ou sans engagement."
         path="/comparer"
       />
       <div>

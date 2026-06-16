@@ -145,9 +145,8 @@ export default function MigrationStepper() {
                 {/* Step indicator */}
                 <div
                   className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ${
-                    step.done ? 'bg-success/20 text-success' : 'border-2 border-border text-muted'
+                    step.done ? 'bg-success/20 text-success' : 'border-2 border-primary/35 text-muted'
                   }`}
-                  style={step.done ? {} : { borderColor: 'hsla(199, 89%, 48%, 0.35)' }}
                 >
                   {step.done ? (
                     <Check className="w-4 h-4" />
@@ -188,8 +187,7 @@ export default function MigrationStepper() {
                       {/* Warning block */}
                       {step.warning && (
                         <div
-                          className="flex items-start gap-2.5 rounded-xl p-3"
-                          style={{ background: 'hsla(43, 96%, 56%, 0.08)', border: '1px solid hsla(43, 96%, 56%, 0.3)' }}
+                          className="flex items-start gap-2.5 rounded-xl p-3 bg-warning/10 border border-warning/30"
                         >
                           <AlertTriangle className="w-4 h-4 text-warning shrink-0 mt-0.5" />
                           <p className="text-xs text-foreground/80 leading-relaxed">{step.warning}</p>
@@ -213,8 +211,7 @@ export default function MigrationStepper() {
                       {/* Tip block */}
                       {step.tip && (
                         <div
-                          className="flex items-start gap-2.5 rounded-xl p-3"
-                          style={{ background: 'hsla(199, 89%, 48%, 0.06)', border: '1px solid hsla(199, 89%, 48%, 0.2)' }}
+                          className="flex items-start gap-2.5 rounded-xl p-3 bg-primary/5 border border-primary/20"
                         >
                           <Lightbulb className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                           <p className="text-xs text-muted leading-relaxed">
@@ -264,8 +261,8 @@ export default function MigrationStepper() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
-            style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)' }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70"
+            style={{ backdropFilter: 'blur(4px)' }}
             onClick={() => setShowEmail(false)}
           >
             <motion.div

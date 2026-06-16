@@ -105,8 +105,7 @@ export default function EligibiliteChecker() {
           <motion.div
             initial={{ opacity: 0, y: -5 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-center gap-2 text-sm text-error rounded-xl p-3"
-            style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)' }}
+            className="flex items-center gap-2 text-sm text-error rounded-xl p-3 bg-error/[0.08] border border-error/20"
           >
             <AlertCircle className="w-4 h-4 shrink-0" />
             {error}
@@ -153,12 +152,7 @@ export default function EligibiliteChecker() {
           >
             {/* Main status */}
             <div
-              className="glass-card p-6"
-              style={
-                result.hasFiber
-                  ? { borderColor: 'hsla(199, 89%, 48%, 0.4)' }
-                  : { borderColor: 'hsla(43, 96%, 56%, 0.4)' }
-              }
+              className={`glass-card p-6 ${result.hasFiber ? 'border-primary/40' : 'border-warning/40'}`}
             >
               <div className="flex items-start gap-4">
                 <div

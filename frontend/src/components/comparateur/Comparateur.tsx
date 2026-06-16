@@ -39,7 +39,7 @@ function SectionHeader({
       </div>
       <div>
         <div className="flex items-baseline gap-2">
-          <h2 className="font-display font-bold text-foreground text-lg">{title}</h2>
+          <h2 className="font-display font-bold text-primary uppercase text-lg">{title}</h2>
           <span className="badge badge-muted">{count} offre{count !== 1 ? 's' : ''}</span>
         </div>
         <p className="text-xs text-muted">{subtitle}</p>
@@ -239,8 +239,7 @@ export default function Comparateur({ initialCompare = [] }: ComparateurProps) {
           className="space-y-5"
         >
           <div
-            className="glass-card px-5 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
-            style={{ borderColor: 'hsla(199, 89%, 48%, 0.35)' }}
+            className="glass-card px-5 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-primary/35"
           >
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">

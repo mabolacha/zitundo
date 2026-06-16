@@ -79,11 +79,10 @@ export default function HomePage() {
         path="/"
       />
       {/* Hero */}
-      <section className="relative pt-8 pb-16 text-center overflow-hidden">
+      <section className="relative pt-8 pb-16 text-center overflow-hidden bg-primary-light border-b border-border -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
         {/* Subtle background tint */}
         <div
-          className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none"
-          style={{ background: 'hsl(199, 89%, 80%)' }}
+          className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-30 blur-3xl pointer-events-none bg-primary/10"
         />
 
         <motion.div
@@ -97,9 +96,9 @@ export default function HomePage() {
             Comparaison 100% indépendante
           </div>
 
-          <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6">
+          <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6 text-primary-dark">
             Trouvez la{' '}
-            <span className="text-gradient">meilleure offre internet</span>
+            <span className="text-primary">meilleure offre internet</span>
             <br />
             en France
           </h1>
@@ -225,14 +224,11 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-3xl p-10 text-center relative overflow-hidden border border-border"
-          style={{
-            background: 'linear-gradient(135deg, hsla(199, 89%, 48%, 0.06) 0%, hsla(199, 89%, 60%, 0.03) 100%)',
-          }}
+          className="rounded-3xl p-10 text-center relative overflow-hidden border border-border bg-primary-light"
         >
           <div
             className="absolute inset-0 opacity-40"
-            style={{ background: 'radial-gradient(circle at 50% 0%, hsla(199, 89%, 48%, 0.08), transparent 60%)' }}
+            style={{ background: 'radial-gradient(circle at 50% 0%, rgba(26, 58, 92, 0.08), transparent 60%)' }}
           />
           <div className="relative">
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-foreground mb-4">

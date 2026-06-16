@@ -45,7 +45,7 @@ export default function App() {
           className="fixed inset-0 pointer-events-none"
           style={{
             background:
-              'radial-gradient(ellipse at 20% 10%, hsla(199, 89%, 48%, 0.04) 0%, transparent 50%)',
+              'radial-gradient(ellipse at 20% 10%, rgba(26, 58, 92, 0.04) 0%, transparent 50%)',
           }}
         />
 
@@ -60,7 +60,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-muted text-sm">
-                © 2024 InternetFrance — Comparateur indépendant, 100% gratuit.
+                © 2026 Zitundo — Comparateur indépendant, 100% gratuit.
               </p>
               <p className="text-muted/50 text-xs">
                 Les prix affichés sont indicatifs et peuvent varier.

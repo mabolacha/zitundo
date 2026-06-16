@@ -17,7 +17,14 @@
       "Bash(xargs kill -9)",
       "Bash(TMPDIR=/Users/anselme lsof -i :5001)",
       "Bash(TMPDIR=/Users/anselme curl -s http://localhost:5001/health)",
-      "Bash(TMPDIR=/Users/anselme curl -s http://localhost:5001/api/offres)"
+      "Bash(TMPDIR=/Users/anselme curl -s http://localhost:5001/api/offres)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git status*)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Edit",
+      "Write"
     ]
   }
 }

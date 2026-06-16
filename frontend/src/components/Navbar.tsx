@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-white/90"
+      className="fixed top-0 left-0 right-0 z-50 bg-primary-dark"
       style={{
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
@@ -27,11 +27,11 @@ export default function Navbar() {
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-2 group">
             <div className="relative">
-              <Wifi className="w-6 h-6 text-primary transition-colors duration-200" />
-              <Zap className="absolute -top-1 -right-1 w-3 h-3 text-primary-light" />
+              <Wifi className="w-6 h-6 text-cream transition-colors duration-200" />
+              <Zap className="absolute -top-1 -right-1 w-3 h-3 text-accent" />
             </div>
-            <span className="font-display font-bold text-lg hidden sm:block">
-              <span className="text-gradient">InternetFrance</span>
+            <span className="font-display font-bold text-lg hidden sm:block text-cream">
+              zit<span className="text-accent">u</span>ndo
             </span>
           </NavLink>
 
@@ -57,7 +57,7 @@ export default function Navbar() {
               Comparer maintenant
             </NavLink>
             <button
-              className="md:hidden p-2 rounded-lg text-muted hover:text-foreground transition-colors"
+              className="md:hidden p-2 rounded-lg text-cream/75 hover:text-cream transition-colors"
               onClick={() => setOpen(!open)}
               aria-label="Menu"
             >
@@ -75,7 +75,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.15 }}
-            className="md:hidden border-t border-border px-4 py-3 space-y-1 bg-white/95"
+            className="md:hidden border-t border-primary/30 px-4 py-3 space-y-1 bg-primary-dark"
           >
             {links.map((link) => (
               <NavLink
@@ -85,8 +85,8 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `block px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'text-primary bg-primary/10'
-                      : 'text-muted hover:text-foreground hover:bg-card'
+                      ? 'text-cream bg-white/10'
+                      : 'text-cream/75 hover:text-cream hover:bg-white/5'
                   }`
                 }
                 onClick={() => setOpen(false)}

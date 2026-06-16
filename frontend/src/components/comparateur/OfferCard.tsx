@@ -75,7 +75,7 @@ export default function OfferCard({
         {/* Price */}
         <div className="text-right shrink-0">
           <div className="flex items-baseline gap-1">
-            <span className="font-display font-bold text-2xl text-foreground">
+            <span className="font-display font-bold text-2xl text-primary-dark">
               {offer.promoPrice.toFixed(2)}
             </span>
             <span className="text-xs text-muted">€/mois</span>
@@ -169,13 +169,9 @@ export default function OfferCard({
       {/* SFR notice */}
       {isSFRGroup && (
         <div
-          className="flex items-start gap-2 rounded-xl px-3 py-2 text-xs text-muted/70 leading-relaxed"
-          style={{
-            background: 'rgba(226,0,26,0.04)',
-            border: '1px solid rgba(226,0,26,0.12)',
-          }}
+          className="flex items-start gap-2 rounded-xl px-3 py-2 text-xs text-accent leading-relaxed bg-accent/[0.08] border border-accent/20"
         >
-          <Info className="w-3 h-3 text-primary/50 mt-0.5 shrink-0" />
+          <Info className="w-3 h-3 text-accent mt-0.5 shrink-0" />
           <span>{SFR_NOTICE}</span>
         </div>
       )}
@@ -197,7 +193,7 @@ export default function OfferCard({
                 : crossGroupBlocked
                 ? 'border border-border/20 text-muted/30 cursor-not-allowed bg-card/30'
                 : canSelect
-                ? 'border border-border text-muted hover:border-primary/50 hover:text-primary'
+                ? 'border border-border text-foreground hover:border-primary hover:text-primary'
                 : 'border border-border/30 text-muted/40 cursor-not-allowed'
             }`}
           >

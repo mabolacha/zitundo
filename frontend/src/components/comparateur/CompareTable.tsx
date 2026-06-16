@@ -27,7 +27,7 @@ const ROWS: Row[] = [
     label: 'Prix promo',
     key: 'promoPrice',
     render: (o) => (
-      <span className="font-display font-bold text-lg text-foreground">
+      <span className="font-display font-bold text-lg text-primary-dark">
         {o.promoPrice.toFixed(2)}€<span className="text-xs font-normal text-muted">/mois</span>
       </span>
     ),

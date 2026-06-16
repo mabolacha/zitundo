@@ -8,17 +8,22 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: 'hsl(199, 89%, 48%)',
-          dark: 'hsl(199, 89%, 40%)',
-          light: 'hsl(199, 89%, 60%)',
+          DEFAULT: '#1A3A5C',
+          dark: '#0D2238',
+          light: '#F0F5FA',
         },
+        accent: {
+          DEFAULT: '#E8714A',
+          hover: '#D9622B',
+        },
+        cream: '#F7F1E3',
         success: 'hsl(160, 84%, 39%)',
         warning: 'hsl(43, 96%, 56%)',
         error: 'hsl(0, 84%, 60%)',
-        background: 'hsl(210, 20%, 98%)',
-        card: 'hsl(0, 0%, 100%)',
-        'card-hover': 'hsl(210, 20%, 96%)',
-        border: 'hsl(214, 32%, 91%)',
+        background: '#F0F5FA',
+        card: '#FFFFFF',
+        'card-hover': '#EAF0F7',
+        border: '#D0DCE8',
         foreground: 'hsl(222, 47%, 11%)',
         muted: {
           DEFAULT: 'hsl(215, 16%, 47%)',
@@ -44,7 +49,7 @@ export default {
         },
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, hsl(199, 89%, 48%), hsl(199, 89%, 60%))',
+        'gradient-primary': 'linear-gradient(135deg, #1A3A5C, #0D2238)',
       },
       backdropBlur: {
         xs: '2px',

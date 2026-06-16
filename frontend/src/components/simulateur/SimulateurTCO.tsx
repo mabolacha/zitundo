@@ -105,8 +105,7 @@ export default function SimulateurTCO({ preselectedId }: SimulateurTCOProps) {
         </label>
 
         <div
-          className="rounded-xl p-3 text-xs text-muted flex items-start gap-2"
-          style={{ background: 'hsla(199, 89%, 48%, 0.05)', border: '1px solid hsla(199, 89%, 48%, 0.18)' }}
+          className="rounded-xl p-3 text-xs text-muted flex items-start gap-2 bg-primary/5 border border-primary/20"
         >
           <Info className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
           <span>
@@ -199,12 +198,7 @@ export default function SimulateurTCO({ preselectedId }: SimulateurTCOProps) {
                       initial={{ width: 0 }}
                       animate={{ width: `${progress(row.value)}%` }}
                       transition={{ duration: 0.6, delay: 0.1 }}
-                      className="h-1.5 rounded-full"
-                      style={{
-                        background: row.accent
-                          ? 'hsl(43, 96%, 56%)'
-                          : 'hsl(199, 89%, 48%)',
-                      }}
+                      className={`h-1.5 rounded-full ${row.accent ? 'bg-warning' : 'bg-primary'}`}
                     />
                   </div>
                 </div>

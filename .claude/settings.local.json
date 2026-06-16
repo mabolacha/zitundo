@@ -18,13 +18,9 @@
       "Bash(TMPDIR=/Users/anselme lsof -i :5001)",
       "Bash(TMPDIR=/Users/anselme curl -s http://localhost:5001/health)",
       "Bash(TMPDIR=/Users/anselme curl -s http://localhost:5001/api/offres)",
-      "Bash(git add *)",
-      "Bash(git commit *)",
-      "Bash(git status*)",
-      "Bash(git diff *)",
-      "Bash(git log *)",
-      "Edit",
-      "Write"
+      "Bash(TMPDIR=/Users/anselme npm install --no-save playwright)",
+      "Bash(TMPDIR=/Users/anselme node render-favicon.cjs)",
+      "Bash(TMPDIR=/Users/anselme npm uninstall playwright)"
     ]
   }
 }

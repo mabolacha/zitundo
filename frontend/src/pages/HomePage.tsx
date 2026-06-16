@@ -26,11 +26,11 @@ const FEATURES = [
     cta: 'Simuler le coût réel',
   },
   {
-    title: 'Guide de migration',
+    title: 'Changer d\'Opérateur',
     desc: 'Checklist interactive : RIO, résiliation, retour matériel. Générez votre lettre de résiliation en un clic.',
     icon: CheckCircle,
     href: '/migration',
-    cta: 'Démarrer la migration',
+    cta: 'Changer d\'opérateur',
   },
   {
     title: 'Test d\'éligibilité',
@@ -49,7 +49,7 @@ const TESTIMONIALS = [
   },
   {
     name: 'Thomas B.',
-    text: 'La checklist de migration est parfaite. J\'ai récupéré mon RIO en 2 minutes et la lettre de résiliation était prête.',
+    text: 'La checklist pour changer d\'opérateur est parfaite. J\'ai récupéré mon RIO en 2 minutes et la lettre de résiliation était prête.',
     rating: 5,
   },
   {

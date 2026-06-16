@@ -121,7 +121,7 @@ export default function MigrationStepper() {
         </div>
         <p className="text-xs text-muted mt-2">
           {doneCount === steps.length
-            ? '🎉 Migration complète ! Félicitations.'
+            ? '🎉 Changement d\'opérateur terminé ! Félicitations.'
             : `${steps.length - doneCount} étape${steps.length - doneCount > 1 ? 's' : ''} restante${steps.length - doneCount > 1 ? 's' : ''}`}
         </p>
       </div>

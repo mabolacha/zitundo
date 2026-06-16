@@ -7,7 +7,7 @@ const links = [
   { to: '/', label: 'Accueil' },
   { to: '/comparer', label: 'Comparer' },
   { to: '/simulateur', label: 'Simulateur de coût réel' },
-  { to: '/migration', label: 'Migration' },
+  { to: '/migration', label: 'Changer d\'Opérateur' },
   { to: '/eligibilite', label: 'Éligibilité' },
 ];
 

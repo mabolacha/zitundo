@@ -208,6 +208,34 @@ export default function MigrationStepper() {
                         </ul>
                       )}
 
+                      {/* RIO portability warning — step 1 only */}
+                      {step.id === 1 && (
+                        <div className="rounded-[10px] p-4 bg-warning/10 border border-warning space-y-2.5">
+                          <p className="text-sm font-semibold text-foreground flex items-start gap-1.5">
+                            <span className="shrink-0">⚠️</span>
+                            Dans quels cas la portabilité est-elle impossible ?
+                          </p>
+                          <p className="text-sm text-foreground">
+                            Votre demande de portabilité peut être refusée dans 3 cas :
+                          </p>
+                          <ul className="space-y-1.5">
+                            {[
+                              'Votre RIO fait déjà l\'objet d\'une demande de portabilité en cours.',
+                              'Votre numéro est inactif ou résilié depuis plus de 40 jours.',
+                              'Vous déménagez dans une autre zone de numérotation élémentaire (ex : un numéro en 01 ne peut pas devenir un 04). Il existe 414 zones en France.',
+                            ].map((item, i) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-foreground">
+                                <span className="shrink-0 mt-0.5">•</span>
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <p className="text-xs text-muted italic leading-relaxed">
+                            Exception : les numéros non géographiques en 09 (numéro de votre box) restent portables partout en France.
+                          </p>
+                        </div>
+                      )}
+
                       {/* Tip block */}
                       {step.tip && (
                         <div

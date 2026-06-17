@@ -24,6 +24,26 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GA4 — injecté uniquement si consentement analytics déjà accordé (visiteur de retour) -->
+    <script>
+      (function () {
+        try {
+          var raw = localStorage.getItem('zitundo_cookie_consent');
+          if (!raw) return;
+          var data = JSON.parse(raw);
+          if (Date.now() - data.timestamp > 13 * 30 * 24 * 60 * 60 * 1000) return;
+          if (!data.analytics) return;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SN475MDZ82';
+          document.head.appendChild(s);
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () { window.dataLayer.push(arguments); };
+          window.gtag('js', new Date());
+          window.gtag('config', 'G-SN475MDZ82', { anonymize_ip: true });
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

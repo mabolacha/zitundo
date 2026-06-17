@@ -18,28 +18,20 @@ export default function ConsentScripts() {
     analyticsLoaded.current = true;
 
     // ── Google Analytics 4 ──────────────────────────────────────────────────
-    // Remplace G-XXXXXXXXXX par ton Measurement ID
-    //
-    // const script = document.createElement('script');
-    // script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
-    // script.async = true;
-    // document.head.appendChild(script);
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag(...args: unknown[]) { window.dataLayer.push(args); }
-    // gtag('js', new Date());
-    // gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+    // Si index.html a déjà chargé GA4 (visiteur de retour avec consentement),
+    // window.gtag est défini — on ne recharge pas.
+    if (!(window as any).gtag) {
+      const script = document.createElement('script');
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-SN475MDZ82';
+      script.async = true;
+      document.head.appendChild(script);
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as any).gtag = function (...args: unknown[]) { (window as any).dataLayer.push(args); };
+      (window as any).gtag('js', new Date());
+      (window as any).gtag('config', 'G-SN475MDZ82', { anonymize_ip: true });
+    }
 
-    // ── Alternative RGPD-native (Plausible, Matomo cloud) ───────────────────
-    // Plausible ne dépose pas de cookies → peut se passer du consentement,
-    // mais on le conditionne quand même par cohérence et bonne pratique.
-    //
-    // const script = document.createElement('script');
-    // script.defer = true;
-    // script.dataset.domain = 'zitundo.com';
-    // script.src = 'https://plausible.io/js/script.js';
-    // document.head.appendChild(script);
-
-    console.info('[Zitundo] Analytics activés (consentement reçu)');
+    console.info('[Zitundo] Analytics GA4 activés (consentement reçu)');
   }, [loaded, analytics]);
 
   // ─── Affiliation ──────────────────────────────────────────────────────────

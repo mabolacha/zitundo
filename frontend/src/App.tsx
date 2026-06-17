@@ -9,6 +9,8 @@ import SimulateurPage from './pages/SimulateurPage';
 import MigrationPage from './pages/MigrationPage';
 import EligibilitePage from './pages/EligibilitePage';
 import MentionsLegalesPage from './pages/MentionsLegalesPage';
+import BlogListPage from './pages/BlogListPage';
+import BlogArticlePage from './pages/BlogArticlePage';
 
 const pageVariants = {
   initial: { opacity: 0, y: 12 },
@@ -34,6 +36,8 @@ function AnimatedRoutes() {
           <Route path="/migration" element={<MigrationPage />} />
           <Route path="/eligibilite" element={<EligibilitePage />} />
           <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
+          <Route path="/blog" element={<BlogListPage />} />
+          <Route path="/blog/:slug" element={<BlogArticlePage />} />
         </Routes>
       </motion.div>
     </AnimatePresence>

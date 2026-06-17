@@ -9,6 +9,7 @@ const links = [
   { to: '/simulateur', label: 'Simulateur de coût réel' },
   { to: '/migration', label: 'Changer d\'Opérateur' },
   { to: '/eligibilite', label: 'Éligibilité' },
+  { to: '/blog', label: 'Blog' },
 ];
 
 export default function Navbar() {

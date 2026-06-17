@@ -11,7 +11,7 @@ const ENGAGEMENT_POINTS = [
 
 const OFFRES_POINTS = [
   "Notre comparateur couvre les principaux fournisseurs d'accès à Internet du marché français : Orange, Free, SFR, Bouygues, Sosh, RED by SFR et B&You.",
-  "Les tarifs et caractéristiques sont mis à jour chaque mois à partir des données publiées par les opérateurs.",
+  "Les tarifs et caractéristiques sont vérifiés chaque mois à partir des données collectées par UFC-Que Choisir sur les sites des opérateurs.",
   "La sélection est représentative du marché, sans prétendre à l'exhaustivité.",
 ];
 

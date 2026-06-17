@@ -36,7 +36,7 @@ export default function ComparateurPage() {
     <div className="space-y-6">
       <PageSEO
         title="Comparateur Offres Internet Fibre & ADSL | Zitundo"
-        description="Filtrez et comparez 11 offres internet des principaux opérateurs français. Fibre ou ADSL, avec ou sans TV, avec ou sans engagement."
+        description="Filtrez et comparez 19 offres internet des principaux opérateurs français. Fibre ou ADSL, avec ou sans TV, avec ou sans engagement."
         path="/comparer"
       />
       <div>
@@ -47,7 +47,7 @@ export default function ComparateurPage() {
           </h1>
         </div>
         <p className="text-muted">
-          Filtrez parmi 11 offres des principaux opérateurs français. Sélectionnez jusqu'à 4 offres pour un tableau comparatif détaillé.
+          Filtrez parmi 19 offres des principaux opérateurs français. Sélectionnez jusqu'à 4 offres pour un tableau comparatif détaillé.
         </p>
       </div>
       <Comparateur />

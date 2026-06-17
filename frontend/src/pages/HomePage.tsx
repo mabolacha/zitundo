@@ -5,7 +5,7 @@ import PageSEO from '../components/PageSEO';
 
 const STATS = [
   { icon: Shield, label: '100% Gratuit', sub: 'Aucune commission cachée', color: 'text-primary' },
-  { icon: BarChart3, label: '11 offres', sub: 'Comparées en 2 minutes', color: 'text-primary' },
+  { icon: BarChart3, label: '19 offres', sub: 'Comparées en 2 minutes', color: 'text-primary' },
   { icon: Zap, label: 'Temps réel', sub: 'Prix mis à jour quotidiennement', color: 'text-success' },
   { icon: Clock, label: '< 2 minutes', sub: 'Pour trouver votre offre idéale', color: 'text-warning' },
 ];

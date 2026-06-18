@@ -63,4 +63,36 @@ export const articles: Article[] = [
 <h2>6. Rester captif d'un opérateur à cause de son adresse mail</h2>
 <p>De nombreux abonnés conservent un abonnement devenu trop cher uniquement pour ne pas perdre leur adresse email @orange.fr, @sfr.fr ou @free.fr. C'est un piège évitable : migrez progressivement vos contacts vers une adresse indépendante (Gmail, Outlook, ProtonMail) avant de changer d'opérateur. Une fois la transition faite, vous retrouvez toute liberté de choisir l'offre la plus adaptée à votre budget — sans être retenu par une adresse email.</p>`,
   },
+  {
+    id: '3',
+    slug: 'rachat-sfr-2026-ce-qui-change',
+    titre: 'Rachat de SFR par Orange, Bouygues et Free : ce qui va changer pour vous',
+    metaDescription:
+      "Le rachat de SFR pour 20,35 milliards d'euros a été officialisé le 6 juin 2026. On vous explique ce que ce démantèlement signifie concrètement pour les abonnés SFR et RED by SFR.",
+    datePublication: '2026-06-20',
+    tempsLecture: 5,
+    categorie: 'actualite',
+    imageAlt: 'Rachat SFR par Orange Bouygues Free 2026',
+    chapeau:
+      "Après huit mois de négociations, l'accord est signé : SFR va être démantelé et réparti entre Orange, Bouygues et Free. Voici ce que cela implique pour les abonnés.",
+    contenu: `<h2>Un accord historique pour les télécoms français</h2>
+<p>Dans la nuit du 6 juin 2026, Orange, Bouygues Telecom et Free ont signé un protocole d'accord avec Altice France pour racheter SFR, au prix de 20,35 milliards d'euros. Cette opération, qualifiée par les trois opérateurs eux-mêmes d'une des plus importantes de l'histoire des télécoms en Europe, marque la fin de SFR en tant qu'opérateur indépendant.</p>
+
+<p>Il aura fallu huit mois de négociations, deux offres successives et un sprint final de 48 heures pour aboutir à cet accord. Une première offre à 17 milliards d'euros avait été rejetée par Altice en octobre 2025, avant qu'une seconde proposition à 20,35 milliards ne soit acceptée en avril 2026.</p>
+
+<h2>SFR ne sera pas racheté, mais démantelé</h2>
+<p>Contrairement à un rachat classique où un seul acheteur récupère l'intégralité d'une entreprise, cette opération va découper SFR : ses 25 millions de clients, ses réseaux et ses actifs seront répartis entre les trois opérateurs. Bouygues Telecom est le premier contributeur financier, avec 42% du montant total (8,5 milliards d'euros), et récupérera en contrepartie l'ensemble de SFR Business ainsi que plusieurs millions de clients grand public.</p>
+
+<p>Free et Orange se partageront le reste de la base d'abonnés résidentiels : Free viserait les 31 millions d'abonnés au global, tandis qu'Orange récupérerait environ 4,9 millions de clients SFR.</p>
+
+<h2>Qu'est-ce que cela change pour les abonnés SFR et RED by SFR ?</h2>
+<p>Pour l'instant, rien de concret à court terme. L'accord signé est un protocole, pas une finalisation : l'opération doit encore passer par plusieurs étapes réglementaires, notamment l'examen de l'Autorité de la concurrence française et probablement de la Commission européenne, étant donné l'ampleur de la transaction.</p>
+
+<p>La finalisation est attendue pour le second semestre 2027. D'ici là, les contrats SFR et RED by SFR restent valables sans changement. Mais à terme, les abonnés actuels de SFR et RED seront progressivement transférés vers l'un des trois opérateurs repreneurs, avec potentiellement un changement de box, de réseau ou de conditions tarifaires.</p>
+
+<h2>Pourquoi cette opération est surveillée de près</h2>
+<p>Cette transaction va faire passer la France de quatre à trois opérateurs mobiles et internet d'envergure nationale. Une telle concentration soulève des questions sur la concurrence et les prix à moyen terme — c'est précisément pour cette raison que le régulateur doit encore valider l'opération avant sa mise en œuvre effective.</p>
+
+<p>Chez Zitundo, nous suivons cette actualité de près. C'est pourquoi nous affichons un badge d'information sur les offres SFR et RED by SFR dans notre comparateur, pour que vous puissiez prendre une décision éclairée si vous envisagez de souscrire ou de migrer dans les mois à venir.</p>`,
+  },
 ];

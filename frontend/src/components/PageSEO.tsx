@@ -6,7 +6,7 @@ interface PageSEOProps {
   path?: string;
 }
 
-const BASE_URL = 'https://zitundo.com';
+const BASE_URL = 'https://www.zitundo.com';
 
 export default function PageSEO({ title, description, path = '' }: PageSEOProps) {
   const canonical = `${BASE_URL}${path}`;

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zitundo.com/sitemap.xml
+Sitemap: https://www.zitundo.com/sitemap.xml

@@ -13,6 +13,7 @@ export default function SimulateurPage() {
         title="Simulateur de Coût Réel Internet sur 24 mois | Zitundo"
         description="Calculez le coût total réel de votre abonnement internet sur 24 mois, frais cachés inclus (installation, activation, résiliation, location box)."
         path="/simulateur"
+        imageAlt="Simulateur de coût réel internet sur 24 mois Zitundo"
       />
       <div>
         <div className="flex items-center gap-2 mb-2">

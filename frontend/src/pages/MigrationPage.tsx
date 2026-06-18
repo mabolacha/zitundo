@@ -9,6 +9,7 @@ export default function MigrationPage() {
         title="Changer d'Opérateur Internet sans coupure | Zitundo"
         description="Changez de fournisseur internet en 4 étapes sans coupure de service. Récupérez votre RIO, souscrivez au nouveau FAI et gérez la transition sereinement."
         path="/migration"
+        imageAlt="Guide changement d'opérateur internet Zitundo"
       />
       <div>
         <div className="flex items-center gap-2 mb-2">

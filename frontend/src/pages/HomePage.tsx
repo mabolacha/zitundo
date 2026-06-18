@@ -77,6 +77,7 @@ export default function HomePage() {
         title="Comparez les offres Internet en France | Zitundo"
         description="Comparez gratuitement les offres internet fibre et ADSL d'Orange, Free, SFR, Bouygues, Sosh, RED et B&You. Simulez le coût réel sur 24 mois."
         path="/"
+        imageAlt="Zitundo, comparateur d'offres internet en France"
       />
       {/* Hero */}
       <section className="relative pt-8 pb-16 text-center overflow-hidden bg-primary-light border-b border-border -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">

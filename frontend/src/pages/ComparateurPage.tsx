@@ -38,6 +38,7 @@ export default function ComparateurPage() {
         title="Comparateur Offres Internet Fibre & ADSL | Zitundo"
         description="Filtrez et comparez 19 offres internet des principaux opérateurs français. Fibre ou ADSL, avec ou sans TV, avec ou sans engagement."
         path="/comparer"
+        imageAlt="Comparateur d'offres internet fibre et ADSL Zitundo"
       />
       <div>
         <div className="flex items-center gap-2 mb-2">

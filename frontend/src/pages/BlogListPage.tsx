@@ -45,6 +45,7 @@ export default function BlogListPage() {
         title="Blog Internet — Guides et Conseils | Zitundo"
         description="Guides pratiques, comparatifs et actualités pour choisir la meilleure offre internet en France."
         path="/blog"
+        imageAlt="Blog Zitundo, guides et conseils internet"
       />
 
       <div>

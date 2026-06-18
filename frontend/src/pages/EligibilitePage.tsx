@@ -9,6 +9,7 @@ export default function EligibilitePage() {
         title="Tester mon Éligibilité Fibre & ADSL | Zitundo"
         description="Vérifiez si la fibre optique est disponible à votre adresse en France. Résultats basés sur les données des opérateurs."
         path="/eligibilite"
+        imageAlt="Test d'éligibilité fibre et ADSL Zitundo"
       />
       <div className="text-center">
         <div className="flex items-center justify-center gap-2 mb-2">

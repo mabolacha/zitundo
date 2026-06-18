@@ -53,7 +53,7 @@ export default function SimulateurTCO({ preselectedId }: SimulateurTCOProps) {
     setLoading(true);
     setError(null);
     try {
-      const { data } = await axios.get<Offer[]>('/api/offres');
+      const { data } = await axios.get<Offer[]>('/_/backend/api/offres');
       setOffers(data);
       const initial = preselectedId && data.find((o) => o.id === preselectedId)
         ? preselectedId

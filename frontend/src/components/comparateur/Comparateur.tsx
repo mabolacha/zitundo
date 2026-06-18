@@ -107,7 +107,7 @@ export default function Comparateur({ initialCompare = [] }: ComparateurProps) {
     setLoading(true);
     setError(null);
     try {
-      const { data } = await axios.get<Offer[]>('/api/offres');
+      const { data } = await axios.get<Offer[]>('/_/backend/api/offres');
       setOffers(data);
     } catch {
       setError("Impossible de charger les offres. Vérifiez que le serveur backend est démarré.");

@@ -227,6 +227,7 @@ export default function Comparateur({ initialCompare = [] }: ComparateurProps) {
   }
 
   return (
+    <>
     <AnimatePresence mode="wait">
       {compareMode ? (
         /* ── MODE COMPARAISON ── */
@@ -281,7 +282,7 @@ export default function Comparateur({ initialCompare = [] }: ComparateurProps) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -16 }}
           transition={{ duration: 0.25 }}
-          className="space-y-6"
+          className={`space-y-6${compareIds.length >= 1 ? ' pb-28 sm:pb-0' : ''}`}
         >
           <FiltersPanel filters={filters} onChange={handleFiltersChange} />
 
@@ -309,7 +310,7 @@ export default function Comparateur({ initialCompare = [] }: ComparateurProps) {
                   )}
                 </p>
 
-                <div className="flex items-center gap-2">
+                <div className="hidden sm:flex items-center gap-2">
                   {compareIds.length >= 1 && (
                     <button
                       onClick={clearSelection}
@@ -374,5 +375,41 @@ export default function Comparateur({ initialCompare = [] }: ComparateurProps) {
         </motion.div>
       )}
     </AnimatePresence>
+
+    {/* Barre de sélection fixe – mobile uniquement */}
+    {!compareMode && compareIds.length >= 1 && (
+      <AnimatePresence>
+        <motion.div
+          key="mobile-bar"
+          initial={{ y: 80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 80, opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="fixed bottom-0 inset-x-0 z-50 sm:hidden bg-white border-t border-border shadow-[0_-4px_16px_rgba(0,0,0,0.08)] px-4 pt-3 pb-5"
+        >
+          <div className="flex items-center justify-between gap-2 mb-2.5">
+            <p className="text-sm font-semibold text-foreground">
+              {compareIds.length} offre{compareIds.length > 1 ? 's' : ''} sélectionnée{compareIds.length > 1 ? 's' : ''}
+            </p>
+            <button
+              onClick={clearSelection}
+              title="Effacer la sélection"
+              className="flex items-center justify-center w-8 h-8 rounded-xl text-muted hover:text-error hover:bg-error/10 border border-border/40 transition-all duration-200 shrink-0"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+          {compareIds.length >= 2 ? (
+            <button onClick={enterCompareMode} className="btn-primary text-sm py-2.5 w-full">
+              <GitCompare className="w-4 h-4" />
+              Voir le tableau comparatif
+            </button>
+          ) : (
+            <p className="text-xs text-muted">Sélectionnez une offre de plus pour comparer</p>
+          )}
+        </motion.div>
+      </AnimatePresence>
+    )}
+    </>
   );
 }

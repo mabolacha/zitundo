@@ -33,4 +33,34 @@ export const articles: Article[] = [
 <h2>Notre verdict</h2>
 <p>Il n'existe pas de meilleure box universelle — tout dépend de votre usage. Grand consommateur de streaming&nbsp;? Optez pour la Freebox Ultra. Vous cherchez la stabilité Wi-Fi dans un grand logement&nbsp;? La Bbox Ultym est faite pour vous. Budget serré&nbsp;? RED by SFR tient ses promesses. Utilisez notre simulateur pour calculer le coût réel sur 24&nbsp;mois et trouver l'offre adaptée à votre profil.</p>`,
   },
+  {
+    id: '2',
+    slug: 'pieges-offres-fai-a-eviter',
+    titre: 'Offres FAI : les 6 pièges à éviter absolument',
+    metaDescription:
+      'Prix promo qui doublent, frais cachés de résiliation, engagement mal lu... Découvrez les 6 pièges les plus courants des offres internet et comment les éviter.',
+    datePublication: '2026-06-18',
+    tempsLecture: 6,
+    categorie: 'guide',
+    imageAlt: 'Pièges offres internet FAI France',
+    chapeau:
+      'Un prix affiché à 24,99€ peut cacher une facture bien plus salée. Voici les 6 erreurs les plus courantes des abonnés internet — et comment les éviter.',
+    contenu: `<h2>1. Se fier uniquement au prix promotionnel</h2>
+<p>C'est le piège le plus fréquent. La quasi-totalité des offres des opérateurs historiques (Orange, Bouygues, SFR) affichent un tarif attractif pendant 12 mois, puis le prix monte significativement. Une offre à 29,99&nbsp;€/mois peut passer à 42,99&nbsp;€ dès le 13ème mois — soit 156&nbsp;€ de plus sur la deuxième année. Avant de souscrire, calculez toujours le coût réel sur 24 mois. Notre simulateur Zitundo le fait automatiquement pour vous.</p>
+
+<h2>2. Confondre "sans engagement" et "sans frais de résiliation"</h2>
+<p>"Sans engagement" ne signifie pas que vous pouvez partir sans rien payer. Tous les opérateurs facturent des frais fixes de fermeture de ligne, même sur les offres sans engagement : 50&nbsp;€ chez Orange et Sosh, 59&nbsp;€ chez Bouygues, 49&nbsp;€ chez Free, RED by SFR et SFR. B&amp;You fait exception avec seulement 5&nbsp;€. Bonne nouvelle : la plupart des nouveaux FAI remboursent ces frais jusqu'à 100-150&nbsp;€ si vous les demandez dans les 3 mois suivant votre souscription.</p>
+
+<h2>3. Ne pas vérifier son éligibilité fibre avant de souscrire</h2>
+<p>Souscrire une offre fibre sans vérifier que votre logement est raccordé au réseau fibre est une erreur courante. L'opérateur peut vous proposer une installation avec délai de plusieurs semaines, voire refuser le raccordement si votre immeuble ou votre rue n'est pas encore desservi. Vérifiez toujours votre éligibilité sur notre outil ou sur maconnexioninternet.arcep.fr avant de signer.</p>
+
+<h2>4. Oublier les frais d'installation et d'activation</h2>
+<p>Le prix mensuel affiché ne comprend pas toujours les frais de mise en service (entre 39&nbsp;€ et 49&nbsp;€ selon les opérateurs) ni les éventuels frais de passage d'un technicien pour le raccordement fibre. Ces frais sont parfois offerts lors des promotions — vérifiez-le dans les conditions générales, pas seulement dans le bandeau publicitaire.</p>
+
+<h2>5. Résilier son ancien abonnement soi-même avant d'avoir souscrit le nouveau</h2>
+<p>C'est l'erreur qui coûte le plus cher. Si vous résiliez votre abonnement actuel vous-même, votre ligne est coupée et vous perdez définitivement votre numéro de téléphone fixe. La bonne procédure : souscrivez d'abord chez le nouveau FAI en lui donnant votre code RIO (à obtenir en appelant le 3179), et c'est lui qui se charge de résilier l'ancien contrat à votre place, une fois la nouvelle ligne active. Aucune coupure de service.</p>
+
+<h2>6. Rester captif d'un opérateur à cause de son adresse mail</h2>
+<p>De nombreux abonnés conservent un abonnement devenu trop cher uniquement pour ne pas perdre leur adresse email @orange.fr, @sfr.fr ou @free.fr. C'est un piège évitable : migrez progressivement vos contacts vers une adresse indépendante (Gmail, Outlook, ProtonMail) avant de changer d'opérateur. Une fois la transition faite, vous retrouvez toute liberté de choisir l'offre la plus adaptée à votre budget — sans être retenu par une adresse email.</p>`,
+  },
 ];

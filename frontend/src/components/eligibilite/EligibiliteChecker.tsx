@@ -75,7 +75,7 @@ export default function EligibiliteChecker() {
           Entrez votre adresse complète pour vérifier les technologies disponibles et les opérateurs éligibles à votre domicile.
         </p>
 
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2">
           <div className="relative flex-1">
             <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted pointer-events-none" />
             <input
@@ -90,7 +90,7 @@ export default function EligibiliteChecker() {
           <button
             onClick={handleCheck}
             disabled={loading}
-            className="btn-primary shrink-0"
+            className="btn-primary w-full sm:w-auto"
           >
             {loading ? (
               <Loader2 className="w-4 h-4 animate-spin" />

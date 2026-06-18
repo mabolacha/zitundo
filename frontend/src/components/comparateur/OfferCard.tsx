@@ -187,7 +187,7 @@ export default function OfferCard({
                 ? `Vous ne pouvez comparer que des offres du même groupe (${activeCategory === 'pure-player' ? 'Opérateurs historiques' : 'Marques low-cost'} sélectionné)`
                 : undefined
             }
-            className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-xl text-xs font-semibold transition-all duration-200 ${
+            className={`flex-1 flex items-center justify-center gap-2 py-2 min-h-[44px] rounded-xl text-xs font-semibold transition-all duration-200 ${
               selected
                 ? 'bg-primary/20 text-primary border border-primary/40'
                 : crossGroupBlocked
@@ -206,7 +206,7 @@ export default function OfferCard({
           </button>
           <button
             onClick={() => onSimulate(offer)}
-            className="flex-1 btn-primary text-xs py-2 justify-center"
+            className="flex-1 btn-primary text-xs py-2 min-h-[44px] justify-center"
           >
             Simuler le coût
             <ArrowRight className="w-3.5 h-3.5" />

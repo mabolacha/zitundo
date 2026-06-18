@@ -1,5 +1,5 @@
-import { useCallback } from 'react';
-import { SlidersHorizontal, X, ChevronDown } from 'lucide-react';
+import { useState, useCallback } from 'react';
+import { SlidersHorizontal, X, ChevronDown, ChevronUp } from 'lucide-react';
 import type { Filters, Technology } from '../../types';
 
 interface FiltersProps {
@@ -17,6 +17,7 @@ const MAX_PRICES = [20, 30, 40, 50, 60, 100];
 const MIN_SPEEDS = [0, 100, 500, 1000, 5000];
 
 export default function Filters({ filters, onChange }: FiltersProps) {
+  const [mobileOpen, setMobileOpen] = useState(false);
   const set = useCallback(
     <K extends keyof Filters>(key: K, val: Filters[K]) => {
       onChange({ ...filters, [key]: val });
@@ -45,22 +46,33 @@ export default function Filters({ filters, onChange }: FiltersProps) {
 
   return (
     <div className="glass-card p-5">
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between">
         <div className="flex items-center gap-2 text-foreground font-semibold">
           <SlidersHorizontal className="w-4 h-4 text-primary" />
           Filtres
+          {hasActiveFilters && <span className="badge badge-accent text-xs">actifs</span>}
         </div>
-        {hasActiveFilters && (
+        <div className="flex items-center gap-2">
+          {hasActiveFilters && (
+            <button
+              onClick={reset}
+              className="flex items-center gap-1 text-xs text-muted hover:text-error transition-colors"
+            >
+              <X className="w-3 h-3" />
+              Réinitialiser
+            </button>
+          )}
           <button
-            onClick={reset}
-            className="flex items-center gap-1 text-xs text-muted hover:text-error transition-colors"
+            onClick={() => setMobileOpen((v) => !v)}
+            className="sm:hidden flex items-center gap-1 text-sm font-medium text-primary border border-primary/30 rounded-lg px-2.5 py-1.5 min-h-[36px]"
           >
-            <X className="w-3 h-3" />
-            Réinitialiser
+            {mobileOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            {mobileOpen ? 'Fermer' : 'Afficher'}
           </button>
-        )}
+        </div>
       </div>
 
+      <div className={mobileOpen ? 'block mt-4' : 'hidden sm:block sm:mt-4'}>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
         {/* Technologie */}
         <div className="xl:col-span-1">
@@ -167,6 +179,7 @@ export default function Filters({ filters, onChange }: FiltersProps) {
             </label>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

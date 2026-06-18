@@ -96,7 +96,7 @@ export default function HomePage() {
             Comparaison 100% indépendante
           </div>
 
-          <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-tight mb-6 text-primary-dark">
+          <h1 className="font-display font-bold text-3xl sm:text-5xl lg:text-7xl leading-tight mb-6 text-primary-dark">
             Trouvez la{' '}
             <span className="text-primary">meilleure offre internet</span>
             <br />

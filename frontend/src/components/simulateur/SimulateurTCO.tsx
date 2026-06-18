@@ -174,10 +174,12 @@ export default function SimulateurTCO({ preselectedId }: SimulateurTCOProps) {
               {tco.total.toFixed(2)}€
             </div>
             <div className="flex justify-center">
-              <div className="badge badge-primary text-sm px-4 py-2 mt-2">
-                <TrendingDown className="w-4 h-4" />
-                Coût Réel Mensuel Lissé :{' '}
-                <strong className="ml-1 text-base">{tco.monthlySmoothed.toFixed(2)}€/mois</strong>
+              <div className="badge badge-primary px-4 py-2 mt-2 flex-wrap justify-center gap-x-1.5 gap-y-0.5 rounded-xl max-w-full">
+                <span className="flex items-center gap-1 text-xs sm:text-sm">
+                  <TrendingDown className="w-4 h-4 shrink-0" />
+                  Coût Réel Mensuel Lissé
+                </span>
+                <strong className="text-sm sm:text-base">{tco.monthlySmoothed.toFixed(2)}€/mois</strong>
               </div>
             </div>
 

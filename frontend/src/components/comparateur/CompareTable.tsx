@@ -172,6 +172,9 @@ export default function CompareTable({ offers, onRemove }: CompareTableProps) {
         </h3>
       </div>
 
+      <p className="sm:hidden text-xs text-muted/70 text-center py-2 px-4 italic border-b border-border/30">
+        Faites défiler horizontalement pour voir toutes les colonnes →
+      </p>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[500px]">
           <thead>

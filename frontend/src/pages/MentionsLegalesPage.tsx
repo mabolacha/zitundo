@@ -26,13 +26,10 @@ export default function MentionsLegalesPage() {
       <section className="glass-card p-6 space-y-3">
         <h2 className="font-display font-bold text-xl text-primary-dark">1. Éditeur du site</h2>
         <div className="text-sm text-muted space-y-1 leading-relaxed">
-          <p><span className="font-medium text-foreground">Nom :</span> [NOM / RAISON SOCIALE]</p>
-          <p><span className="font-medium text-foreground">Adresse :</span> [ADRESSE COMPLÈTE]</p>
-          <p><span className="font-medium text-foreground">Email :</span> [EMAIL DE CONTACT]</p>
-          <p><span className="font-medium text-foreground">Site web :</span> https://zitundo.com</p>
-          <p className="pt-2 text-xs text-muted/70 italic">
-            En tant que site d'information et de comparaison non soumis à immatriculation commerciale obligatoire, les informations ci-dessus seront complétées lors de la mise en production.
-          </p>
+          <p><span className="font-medium text-foreground">Nom :</span> Zitundo</p>
+          <p><span className="font-medium text-foreground">Adresse :</span> 2A impasse Simone de Beauvoir, 31240 Saint-Jean</p>
+          <p><span className="font-medium text-foreground">Email :</span> contact@zitundo.com</p>
+          <p><span className="font-medium text-foreground">Site web :</span> https://www.zitundo.com</p>
         </div>
       </section>
 
@@ -112,7 +109,7 @@ export default function MentionsLegalesPage() {
         </ul>
         <p className="text-sm text-muted leading-relaxed">
           Pour exercer ces droits, contactez notre délégué à la protection des données (DPO) à :{' '}
-          <a href="mailto:[EMAIL DPO]" className="text-primary hover:underline">[EMAIL DPO]</a>.
+          <a href="mailto:DPO@zitundo.com" className="text-primary hover:underline">DPO@zitundo.com</a>.
         </p>
         <p className="text-sm text-muted leading-relaxed">
           Vous pouvez également introduire une réclamation auprès de la{' '}
@@ -140,7 +137,7 @@ export default function MentionsLegalesPage() {
         <h2 className="font-display font-bold text-xl text-primary-dark">7. Contact</h2>
         <p className="text-sm text-muted leading-relaxed">
           Pour toute question relative à ce site ou à vos données personnelles :{' '}
-          <a href="mailto:[EMAIL DE CONTACT]" className="text-primary hover:underline">[EMAIL DE CONTACT]</a>
+          <a href="mailto:contact@zitundo.com" className="text-primary hover:underline">contact@zitundo.com</a>
         </p>
       </section>
     </div>
